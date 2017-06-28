@@ -15575,7 +15575,15 @@ i.e elements which have high priority are most likely to get picked up.</li>
 <li>Repeat the steps from Step 3 to Step 6 until we get least error points.</li>
 </ol>
 </li>
-<li>This is known as Adaptive Boosting and in this dataset we are doing it the same way training some elements then increasing priority of error points and then picking up again to train until get least error points.</li>
+<li><p>When we repeat one step it counts as an iteration and we do n iterations until we get max accuracy. It keeps on iterating on more complex training data until max accuracy is achieved
+All of the weak hypothesis are combined finally which makes this model perfect on doing predictions on training set. 
+And finally on predicting stage it makes prediction perfect.</p>
+</li>
+<li><p>Now suppose We have 1000 peoples in training set we choose 250 peoples and train out data. We got some points wrong that say these i peopeles earned &gt;50K and these j peopled earned &lt;=50K but in real i peopeles earned &lt;=50K and these j peopled earned &gt;50K. So now we increase theit weight. Now gain we do an iteration more completes on this time picking up some peoples and who were predicted wrong will gain weight but in this case we see more ratio previously weighted peoples got predicted right salary and we will decrease the weight of peoples who got right salary predicted. And this continues in loop.
+Now we combine each if this weighted classifier which becomes our overall combined predictor. This combination of models will
+produce an overall region which is more complex in which we will see a region which will predict that salary is &gt;50K or &lt;=50K.</p>
+</li>
+<li><strong>So this is how ADABOOST works</strong>.</li>
 </ul>
 
 </div>
