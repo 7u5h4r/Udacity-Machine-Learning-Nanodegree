@@ -11804,7 +11804,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11862,7 +11862,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -12005,7 +12005,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12154,7 +12154,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
@@ -12214,7 +12214,8 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> I attempted to predict with 'Grocery' feature. 
 The repoted prediction score is 0.602801978878.
-The score is not good i can easily see it is co-related with other features in the data.</p>
+The score is not good i can easily see it is co-related with other features in the data.
+This feature is not necessary for identifying customers spending habits, as we can combine it with other features or other features only be usable</p>
 
 </div>
 </div>
@@ -12230,7 +12231,7 @@ The score is not good i can easily see it is co-related with other features in t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
@@ -14067,7 +14068,7 @@ We can also see degree of co-relation between Detergents, Grocery and milk but i
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
@@ -18177,7 +18178,7 @@ uM92bONv8ZcAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the log-transformed sample data</span>
@@ -18284,7 +18285,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># For each feature find the data points with extreme high or low values</span>
@@ -19120,7 +19121,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with the same number of dimensions as features</span>
@@ -19133,6 +19134,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 
 <span class="c1"># Generate PCA results plot</span>
 <span class="n">pca_results</span> <span class="o">=</span> <span class="n">vs</span><span class="o">.</span><span class="n">pca_results</span><span class="p">(</span><span class="n">good_data</span><span class="p">,</span> <span class="n">pca</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">pca_results</span><span class="p">[</span><span class="s1">&#39;Explained Variance&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -19142,6 +19144,23 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Dimension 1    0.4430
+Dimension 2    0.7068
+Dimension 3    0.8299
+Dimension 4    0.9311
+Dimension 5    0.9796
+Dimension 6    1.0000
+Name: Explained Variance, dtype: float64
+</pre>
+</div>
+</div>
 
 <div class="output_area">
 
@@ -19495,10 +19514,10 @@ QmCC
 </ul>
 </li>
 <li>Represenatation of Dimentions:<ul>
-<li>1st Dimension: It represents high volume of Detergents followed by Grocery and Milk in most of cases they are often bought together so increse in detergents would make increase in milk and grocery i.e these three highly co relate with each other. Where as they have decrease in Fresh and frozen of approx ~ 0.2.</li>
-<li>2nd Dimension: It represents high volume of Fresh products followed by Frozen and Delicatessen and they are often bought together having high corelation. Amount of grocery ,milk and Detergents is very less in this dimension.</li>
-<li>3rd Dimension: It represents somewhat corelation in between Delicatessen and frozen items and fresh food has high negative value followed by Grocery where as other lie near to 0 i.e ~ 0.</li>
-<li>4th Dimension: It represents very less co realtion in between Frozen and Detergents item. Where as Delicatessen has high negative value ~ -0.5 followed by Fresh items ~ -0.2, Grocery has valur near to 0 i.e ~ 0.</li>
+<li>1st Dimension: It represents high volume of Detergents followed by Grocery and Milk in most of cases they are often bought together so increse in detergents would make increase in milk and grocery i.e these three highly co-relate with each other. This could represent Local Shop.</li>
+<li>2nd Dimension: It represents high volume of Fresh products followed by Frozen and Delicatessen and they are often bought together having high corelation. So increase in any one of then increases all those values. This could represent Supermarket </li>
+<li>3rd Dimension: It represents somewhat corelation in between Delicatessen and frozen items. This could be a cafe.</li>
+<li>4th Dimension: It represents only Frozen items hae high spending or we can say it has very less co-relation with Delicatessen. This could represent a ice-cream shop.</li>
 </ul>
 </li>
 </ul>
@@ -19517,7 +19536,7 @@ QmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after having a PCA transformation applied</span>
@@ -19621,7 +19640,7 @@ QmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with only two dimensions</span>
@@ -19653,7 +19672,7 @@ QmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after applying PCA transformation in two dimensions</span>
@@ -19736,7 +19755,7 @@ QmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -19753,13 +19772,13 @@ QmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[34]:</div>
+<div class="prompt output_prompt">Out[15]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1f99a860&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2040ac18&gt;</pre>
 </div>
 
 </div>
@@ -20926,7 +20945,7 @@ AACJIcgEAAAAACSGIBMAAAAAkBiCTAAAAABAYv5/2txkiLeSgM0AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply your clustering algorithm of choice to the reduced data </span>
@@ -21039,7 +21058,7 @@ score: 0.276478936811
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">clusterer</span> <span class="o">=</span> <span class="n">GMM</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
@@ -21094,7 +21113,7 @@ score: 0.276478936811
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the results of the clustering from implementation</span>
@@ -21761,7 +21780,7 @@ cYgAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Inverse transform the centers</span>
@@ -21883,7 +21902,7 @@ cYgAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the predictions</span>
@@ -21928,9 +21947,9 @@ Sample point 2 predicted to be in Cluster 1
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li><strong>Sample point 0:</strong> As it predicted supermarket but according to my intution in 1st question i wrote Food Market, it is a reasonable prediction as spendings on Grocery, Milk and Detegents is near to average. And moreover we have less number of clusters here.</li>
-<li><strong>Sample point 1:</strong> My intution was correct according to 1st question.</li>
-<li><strong>Sample point 2:</strong> My intution was correct according to 1st question.</li>
+<li><strong>Sample point 0:</strong> As it predicted supermarket but according to my intution in 1st question i wrote Food Market, it is a reasonable prediction as spendings on Grocery, Milk and Detegents is near to average. and it has more probability in going to cluster 1 as the values of features of centre of cluster 1 is near to those of sample point 0.</li>
+<li><strong>Sample point 1:</strong> My intution was correct according to 1st question. As the value of features of sample 1 has higher probability of going to centre of cluster 0.</li>
+<li><strong>Sample point 2:</strong> My intution was correct according to 1st question. As we can see that probability of sample point 2 is higher towards centre of cluster 1. As features have more near value to the same of centre of cluster 1.</li>
 </ul>
 
 </div>
@@ -21969,10 +21988,12 @@ Sample point 2 predicted to be in Cluster 1
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>A company can make small changes to their products by randomly testing it on a small amount of customers first.</li>
-<li>First the distributer will pick small amount of customers randomly say 10% and change serivice for them from 5 days a week to 3 days a week for a small period of time say 2 weeks</li>
-<li>Now he will note down the reaction of that 10% customers and note it down that how they react to new service.</li>
-<li>Now after 2 weeks he will again test it on another 10% random set of customers and note down their reaction.</li>
+<li>For eg we need freuent delivery of Milk so the Distributer will test it on Segment 0 as it takes up less amount of milk.</li>
+<li>A Distributer can make small changes to their products by randomly testing it on a small amount of customers of segment 0 first i.e. on customers having same kind of purchases.</li>
+<li>First the distributer will pick small amount of customers randomly from segment 0 say 5% and change service for them from 5 days a week to 3 days a week for a small period of time say 2 weeks.</li>
+<li>Now he will note down the reaction of that 5% customers and note it down that how they react to new service.</li>
+<li>Now after 2 weeks he will again test it on another 5% random set of customers and note down their reaction.</li>
+<li>We will likewise test wise on every customer and repeat in 20 times.</li>
 <li>After testing is done on every customer the distributer will check how peoples respond to these results. If more peoples reacy positively than negative he will keep the change permanent.</li>
 <li>In this small amount of peoples will get angry at a certain time which will be easy for distributer to handle rather then changing delivery time for all customers in one go.</li>
 </ul>
@@ -21996,7 +22017,7 @@ Sample point 2 predicted to be in Cluster 1
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>We can use supervised learning algorithm in this case to predict area for new customers by training the previous customers with their features and labels assigned as we already have those customers and delivering products to them. We can apply K-Nearest Neighbour algorithm to predict area for new customer for delivering products.</p>
+<p>We can use supervised learning algorithm in this case to predict area for new customers. As we have already trained our previous customers and assigned them labels by unsupervised learing. So now we can apply supervised learing aggorithm to predict the new labels of our new customers and define them area so that we can deliver products to those customers according to which area tey belong to.</p>
 
 </div>
 </div>
