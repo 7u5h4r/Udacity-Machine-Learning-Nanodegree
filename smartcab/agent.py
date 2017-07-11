@@ -80,13 +80,7 @@ class LearningAgent(Agent):
         # With the hand-engineered features, this learning process gets entirely negated.
 
         # Set 'state' as a tuple of relevant data for the agent
-        if self.learning:
-            state = (inputs['light'], inputs['oncoming'], inputs['left'], waypoint)
-        else:
-            state = None
-        if self.learning and state not in self.Q.keys():
-            self.Q[state] = {'forward': 0.0, 'left': 0.0, 'right': 0.0, 'None': 0.0}
-
+        state = (inputs['light'], inputs['oncoming'], inputs['left'], waypoint)
         return state
 
 
@@ -99,11 +93,7 @@ class LearningAgent(Agent):
         ###########
         # Calculate the maximum Q-value of all actions for a given state
 
-        maxQ = self.Q[state]['None']
-
-        for key, value in self.Q[state].items():
-            if value > maxQ:
-                maxQ = value
+        maxQ = max(self.Q[state].values())
 
         return maxQ
 
@@ -163,7 +153,7 @@ class LearningAgent(Agent):
         ###########
         # When learning, implement the value iteration update rule
         #   Use only the learning rate 'alpha' (do not use the discount factor 'gamma')
-        if self.learning and state in self.Q.keys() and str(action) in self.Q[state].keys():
+        if self.learning:
             self.Q[state][str(action)] += self.alpha * (reward - self.Q[state][str(action)])
 
         return
@@ -223,7 +213,7 @@ def run():
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test=50,tolerance=0.05)
+    sim.run(n_test=1000,tolerance=0.05)
 
 
 if __name__ == '__main__':
