@@ -17596,12 +17596,12 @@ An optimal policy should state weather the cab goes left,right,forward or none. 
 - - left : 0.13
  As it says light is green and there is None oncoming traffic anf None from left direction and also waypoint says to move in right direction so there is highest no of award points in right direction.
  We can see that if there is incoming traffic in all directions and the smarcab becomes confused so we need more trials to learn the policy better for eg
-     - -('red', 'left', 'right', 'right')
-     - - forward : -0.11
-     - - None : 0.01
-     - - right : 0.05
-     - - left : -0.14
-     As we can see there is incoming traffic in all directions  and the signal is red and it should stay there but right has more points than none so it will move right this is also known as noise in the data.</code></pre>
+ - -  ('green', 'forward', 'left', 'left')
+ - - forward : 0.01
+ - - None : -0.05
+ - - right : 0.01
+ - - left : 0.06
+     As we can see there is incoming traffic in forward direction and the signal is green and it should stay there but none has negative points and the waypoint is saying it to go in left this occures because of noise as there is incoming traffic and from left side they are going left. But the waypoint is towards left which will cause an accident so the can should stay there which is None but it gives negative points this is occuring due to the noise in the data.</code></pre>
 
 </div>
 </div>
