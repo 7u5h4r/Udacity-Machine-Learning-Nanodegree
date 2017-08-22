@@ -1,5 +1,5 @@
-# Digit Recognition
-% accuracyHandwritten Digit Recognition using python and Tensorflow
+# HandWritten Digit Recognition
+Handwritten Digit Recognition using python and Tensorflow
 
 **Check out the blog post [here](http://hanzratech.in/python/handwritten-digit-recognition-using-opencv-sklearn-and-python/) for complete notes on how the code works.**
 
