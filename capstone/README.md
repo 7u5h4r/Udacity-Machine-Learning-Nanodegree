@@ -30,11 +30,11 @@ This repository contains the following files and folders-
 * Add a CNN with ReLu and Pooling Layers.
 
 ## References
-http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html
-http://knowm.org/mnist-hand-written-digits-classification-benchmark/
-https://www.kaggle.com/c/digit-recognizer
-https://www.kaggle.com/c/digit-recognizer/kernels
-http://mxnet.io/tutorials/python/mnist.html
-https://www.tensorflow.org/get_started/graph_viz
-http://scikit-learn.org/stable/auto_examples/classification/plot_digits_classification.html
-https://en.wikipedia.org/wiki/Handwriting_recognition
+1. http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html
+2. http://knowm.org/mnist-hand-written-digits-classification-benchmark/
+3. https://www.kaggle.com/c/digit-recognizer
+4. https://www.kaggle.com/c/digit-recognizer/kernels
+5. http://mxnet.io/tutorials/python/mnist.html
+6. https://www.tensorflow.org/get_started/graph_viz
+7. http://scikit-learn.org/stable/auto_examples/classification/plot_digits_classification.html
+8. https://en.wikipedia.org/wiki/Handwriting_recognition
